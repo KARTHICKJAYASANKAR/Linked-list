@@ -1,0 +1,24 @@
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+
+        ListNode* safe;
+        ListNode* curr;
+        ListNode* prev;
+        curr = head;
+        prev=NULL;
+        while(curr!=NULL)
+        {
+            safe=curr->next;
+            curr->next=prev;
+            prev=curr;
+            curr=safe;
+
+        }
+        return prev;
+
+        
+}
+
+    
+};
